@@ -1,0 +1,17 @@
+package org.colonelkai.place;
+
+public enum PlanetType {
+    EARTHLIKE_TROPICAL,
+    EARTHLIKE_OCEAN,
+    EARTHLIKE_CONTINENTAL,
+    EARTHLIKE_FROZEN,
+    EARTHLIKE_DESERT,
+    EARTHLIKE_MOLTEN,
+    EARTHLIKE_TOXIC,
+    EARTHLIKE_ECUMENOPOLIS,
+    GAS_GIANT,
+    ICE_GIANT,
+    DWARF,
+
+    SUN,
+}
