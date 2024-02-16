@@ -1,7 +1,10 @@
 package org.colonelkai.resources;
 
 public enum ResourceTypes {
+
+    // SPECIAL LITTLE BOYS
     POPULATION,
+
 
     // Unextracted Raw
     UNEXTRACTED_ICE,
@@ -24,7 +27,7 @@ public enum ResourceTypes {
     CARBON,
     TITANIUM,
     MANPOWER,
-    HUMAN_NERV_SYS,
+    BRAIN,
     HUMAN_BIOMASS,
 
     // Basic Products

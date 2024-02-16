@@ -2,29 +2,20 @@ package org.colonelkai;
 
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.events.GenericEvent;
-import net.dv8tion.jda.api.events.session.ReadyEvent;
+import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.utils.cache.CacheFlag;
 
-import java.util.EventListener;
+public class Main {
+    public static void main(String[] args) {
+        JDABuilder builder = JDABuilder.createDefault(TokenGetter.getToken());
 
-public class ReadyListener implements EventListener
-{
-    public static void main(String[] args)
-            throws InterruptedException
-    {
-        // Note: It is important to register your ReadyListener before building
-        JDA jda = JDABuilder.createDefault("token")
-                .addEventListeners(new ReadyListener())
-                .build();
+        // Disable parts of the cache
+        builder.disableCache(CacheFlag.MEMBER_OVERRIDES, CacheFlag.VOICE_STATE);
+        // Enable the bulk delete event
+        builder.setBulkDeleteSplittingEnabled(false);
+        // Set activity (like "playing Something")
+        builder.setActivity(Activity.watching("Truman's Balls"));
 
-        // optionally block until JDA is ready
-        jda.awaitReady();
-    }
-
-    @Override
-    public void onEvent(GenericEvent event)
-    {
-        if (event instanceof ReadyEvent)
-            System.out.println("API is ready!");
+        builder.build();
     }
 }

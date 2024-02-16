@@ -1,6 +1,8 @@
 package org.colonelkai.place;
 
-public class Planet {
+import org.colonelkai.ownable.nameable.AbstractNameable;
+
+public class Planet extends AbstractNameable {
 
     PlanetType planetType;
 

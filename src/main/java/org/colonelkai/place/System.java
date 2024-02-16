@@ -1,12 +1,7 @@
 package org.colonelkai.place;
 
-public class System {
+import org.colonelkai.ownable.nameable.AbstractNameable;
 
-    String name;
-    String description;
-
-    public System(String name, String description) {
-        this.name = name;
-        this.description = description;
-    }
+public class System extends AbstractNameable {
+    
 }

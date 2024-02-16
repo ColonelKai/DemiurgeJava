@@ -1,27 +1,34 @@
 package org.colonelkai.ownable.nameable;
 
-public class AbstractNameable implements Nameable {
+import org.colonelkai.ownable.Ownable;
 
+public class AbstractNamedOwnable implements Nameable, Ownable {
     String name;
     String description;
 
-    @Override
+    int owner;
+
     public String getName() {
         return name;
     }
 
-    @Override
     public void setName(String name) {
         this.name = name;
     }
 
-    @Override
     public String getDescription() {
         return description;
     }
 
-    @Override
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getOwner() {
+        return owner;
+    }
+
+    public void setOwner(int owner) {
+        this.owner = owner;
     }
 }
